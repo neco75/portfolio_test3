@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background-color: grey;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 20px 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
 }
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 40px;
+  margin: 30px 0px 30px 0px;
+  /* text center */
+  text-align: center;
+}
+
+.about img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.about-info {
+  margin-left: 20px;
+}
+
+.about-info h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.skills,
+.gallery,
+.links {
+  padding: 20px;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid black;
+  /* 枠線に影をつける */
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  /* 横のサイズを固定する */
+  width: 25%;
+}
+
+
+/* クラスimg内を中央配置*/
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  /* 画像を中央配置 */
+  object-fit: cover;
+}
+
+.gallery-item a {
+  text-decoration: none;
+  color: black;
+  /* サイズを固定 */
+  width: 100%;
+  height: 100%;
+}
+
+.links img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+footer a{
+  color: lightblue;
+  margin: auto 10px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.about {
+  flex-direction: column;
+}
+
+.links {
+  flex-direction: column;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+}
+
+.contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skills p {
+  text-align: center;
+}
+
+.gallery-item:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+
+/* フッター内の画像にホバーを付ける 画像を拡大する*/
+
+.links img:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+#gallery h2 {
+  padding-bottom: 50px;
+}
+
+.secret {
+  color: white;
+}
+
+/* その場でフェードイン */
+section{
+  animation-name:fadeInAnime;
+  animation-duration:2s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeInAnime{
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+  #skill_list{
+
+    justify-content: space-around;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+
+  }
+  .skill_item{
+    list-style: none;
+    display: flex;
+    /* 枠線をつける */
+    border: 1px solid black;
+    padding: 2%;
+    margin: 1%;
+    /* 角を丸くする */
+    border-radius: 10px;
+    /* 中の要素を等間隔で並べる */
+    justify-content: space-around;
+    /* 縦方向中央にする */
+    align-items: center;
+
+  }
+  .skill_item img{
+    width: 70px;
+    height: 70px;
+  }
+  .skill_item p{
+    font-size: 20px;
+  }

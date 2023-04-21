@@ -1,13 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./Header";
+import Hero from "./Hero";
+import About from "./About";
+import Gallery from "./Gallery";
+import Links from "./Links";
+import Footer from "./Footer";
+import Skill from "./Skill";
+import reportWebVitals from "./reportWebVitals";
+import "./App.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <Hero />
+    <About />
+    <Skill />
+    <Gallery />
+    <Links />
+    <Footer />
   </React.StrictMode>
 );
 
